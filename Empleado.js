@@ -6,10 +6,8 @@ class Empleado {
 
     consultarInfo(){
         console.log("Info Empleados");
-        this.nombreEmpleado.forEach(nombreEmpleado => {
-            console.log(`- ${nombreEmpleado} ${puesto}`)
-            
-        })
+        console.log(`Nombre: ${this.nombreEmpleado}, Puesto: ${this.puesto}`)
+        
     }
 }
 

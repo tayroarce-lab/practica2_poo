@@ -4,8 +4,10 @@ class Departamento{
         this.empleados= empleados
     }
 
-    agregarEmpleados(){
+    agregarEmpleados(empleado){
         this.empleados.push(empleado)
+
+        localStorage.setItem("departamentos", JSON.stringify(empresa.Departamento))
     }
 
     mostrarEmpleados(){
