@@ -22,14 +22,16 @@ class Empresa {
 const empresa = new Empresa("Voltify");
 
 const departamento1 = new Departamento("Desarrollo", [])
-const departamento2 = new Departamento("Diseño", [])
-const departamento3 = new Departamento("QA", [])
 
 empresa.agregarDepartamentos(departamento1);
-empresa.agregarDepartamentos(departamento2);
-empresa.agregarDepartamentos(departamento3);
-
 departamento1.agregarEmpleados(empleado1);
+
+let nombreIngresado = prompt("Ingresa el nombre del nuevo departamento:");
+
+if (nombreIngresado) {
+    let nuevoDepartamento = new Departamento(nombreIngresado, []);
+    empresa.agregarDepartamentos(nuevoDepartamento);
+}
 
 empresa.consultarInfo();
 departamento1.mostrarEmpleados();
